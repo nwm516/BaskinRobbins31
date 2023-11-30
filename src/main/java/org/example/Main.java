@@ -7,9 +7,13 @@ public class Main {
     private static HashMap<Integer, Integer> baskinCache = new HashMap<Integer, Integer>();
     public static void main(String[] args) {
 
-        int finalSolutions = baskin(1,31);
+        int finalSolutions = baskin(31);
         System.out.printf("Number of possible outcomes for Baskin Robbins 31 game: %,d%n", finalSolutions);
 
+    }
+
+    private static int baskin(int maxValue) {
+        return baskin(1, maxValue);
     }
 
     private static int baskin(int currentNumber, int maxValue) {
